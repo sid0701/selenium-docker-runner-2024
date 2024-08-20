@@ -14,6 +14,10 @@ pipeline{
         stage("Execute Test Suites"){
             steps{
                 bat "docker-compose -f test-suites.yaml up"
+                script{
+                    if(fileExists('results/flight-reservation/testng-failed.xml') || fileExists('results/vendor-portal/testng-failed.xml'))
+                        error("Few test cases have failed!!Please have a look.")
+                }
             }
         }
         }
