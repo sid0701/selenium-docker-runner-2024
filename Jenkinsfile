@@ -1,10 +1,14 @@
 pipeline{
     agent any
 
+    parameters {
+            choice choices: ['chrome', 'firefox'], name: 'Browser'
+        }
+
     stages{
         stage("Start Grid"){
             steps{
-                bat "docker-compose -f grid.yaml up --scale chrome=1 --scale firefox=1 -d"
+                bat "docker-compose -f grid.yaml up --scale ${params.Browser}=2 -d"
             }
         }
         stage("Execute Test Suites"){

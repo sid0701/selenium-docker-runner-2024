@@ -4,7 +4,7 @@ services:
     image: sid0701/docker2024
     environment:
       - HUB_HOST=hub
-      - BROWSER=chrome
+      - BROWSER
       - THREAD_COUNT=4
       - TEST_SUITE=vendor-app.xml
     volumes:
@@ -13,7 +13,7 @@ services:
     image: sid0701/docker2024
     environment:
       - HUB_HOST=hub
-      - BROWSER=firefox
+      - BROWSER
       - THREAD_COUNT=4
       - TEST_SUITE=flight-reservation.xml
     volumes:
