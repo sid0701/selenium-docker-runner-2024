@@ -1,0 +1,20 @@
+version: "3"
+services:
+  vendor_portal_test:
+    image: sid0701/docker2024
+    environment:
+      - HUB_HOST=hub
+      - BROWSER=chrome
+      - THREAD_COUNT=4
+      - TEST_SUITE=vendor-app.xml
+    volumes:
+      - ./results/vendor-portal:/home/mydocker/test-output
+  flight_reservation_test:
+    image: sid0701/docker2024
+    environment:
+      - HUB_HOST=hub
+      - BROWSER=firefox
+      - THREAD_COUNT=4
+      - TEST_SUITE=flight-reservation.xml
+    volumes:
+      - ./results/flight-reservation:/home/mydocker/test-output

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-08-20T16:46:22 GMT" name="flight-reservation-suite" finished-at="2024-08-20T16:46:38 GMT" duration-ms="15140">
+    <groups>
+    </groups>
+    <test started-at="2024-08-20T16:46:22 GMT" name="mike.json" finished-at="2024-08-20T16:46:34 GMT" duration-ms="11427">
+      <class name="com.sidgupta.tests.vendorapplication.VendorAppTest">
+        <test-method is-config="true" signature="setDriver(org.testng.ITestContext)[pri:0, instance:com.sidgupta.tests.vendorapplication.VendorAppTest@2812b107]" started-at="2024-08-20T16:46:22 GMT" name="setDriver" finished-at="2024-08-20T16:46:27 GMT" duration-ms="4160" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@291a7e3c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method is-config="true" signature="setPageObjects(java.lang.String)[pri:0, instance:com.sidgupta.tests.vendorapplication.VendorAppTest@2812b107]" started-at="2024-08-20T16:46:27 GMT" name="setPageObjects" finished-at="2024-08-20T16:46:27 GMT" depends-on-methods="com.sidgupta.tests.BaseTest.setDriver" duration-ms="548" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test-data/vendor-application/mike.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setPageObjects -->
+        <test-method signature="loginTest()[pri:0, instance:com.sidgupta.tests.vendorapplication.VendorAppTest@2812b107]" started-at="2024-08-20T16:46:27 GMT" name="loginTest" finished-at="2024-08-20T16:46:28 GMT" duration-ms="1396" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method signature="dashboardTest()[pri:0, instance:com.sidgupta.tests.vendorapplication.VendorAppTest@2812b107]" started-at="2024-08-20T16:46:28 GMT" name="dashboardTest" finished-at="2024-08-20T16:46:34 GMT" depends-on-methods="com.sidgupta.tests.vendorapplication.VendorAppTest.loginTest" duration-ms="5207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dashboardTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sidgupta.tests.vendorapplication.VendorAppTest@2812b107]" started-at="2024-08-20T16:46:34 GMT" name="tearDown" finished-at="2024-08-20T16:46:34 GMT" duration-ms="88" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sidgupta.tests.vendorapplication.VendorAppTest -->
+    </test> <!-- mike.json -->
+    <test started-at="2024-08-20T16:46:22 GMT" name="john.json" finished-at="2024-08-20T16:46:35 GMT" duration-ms="12659">
+      <class name="com.sidgupta.tests.vendorapplication.VendorAppTest">
+        <test-method is-config="true" signature="configSetup()[pri:0, instance:com.sidgupta.tests.vendorapplication.VendorAppTest@4e31276e]" started-at="2024-08-20T16:46:22 GMT" name="configSetup" finished-at="2024-08-20T16:46:22 GMT" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configSetup -->
+        <test-method is-config="true" signature="setDriver(org.testng.ITestContext)[pri:0, instance:com.sidgupta.tests.vendorapplication.VendorAppTest@4e31276e]" started-at="2024-08-20T16:46:22 GMT" name="setDriver" finished-at="2024-08-20T16:46:27 GMT" duration-ms="4161" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@ca30bc1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method is-config="true" signature="setPageObjects(java.lang.String)[pri:0, instance:com.sidgupta.tests.vendorapplication.VendorAppTest@4e31276e]" started-at="2024-08-20T16:46:27 GMT" name="setPageObjects" finished-at="2024-08-20T16:46:27 GMT" depends-on-methods="com.sidgupta.tests.BaseTest.setDriver" duration-ms="548" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test-data/vendor-application/john.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setPageObjects -->
+        <test-method signature="loginTest()[pri:0, instance:com.sidgupta.tests.vendorapplication.VendorAppTest@4e31276e]" started-at="2024-08-20T16:46:27 GMT" name="loginTest" finished-at="2024-08-20T16:46:28 GMT" duration-ms="1399" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method signature="dashboardTest()[pri:0, instance:com.sidgupta.tests.vendorapplication.VendorAppTest@4e31276e]" started-at="2024-08-20T16:46:28 GMT" name="dashboardTest" finished-at="2024-08-20T16:46:35 GMT" depends-on-methods="com.sidgupta.tests.vendorapplication.VendorAppTest.loginTest" duration-ms="6444" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dashboardTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sidgupta.tests.vendorapplication.VendorAppTest@4e31276e]" started-at="2024-08-20T16:46:35 GMT" name="tearDown" finished-at="2024-08-20T16:46:35 GMT" duration-ms="82" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sidgupta.tests.vendorapplication.VendorAppTest -->
+    </test> <!-- john.json -->
+    <test started-at="2024-08-20T16:46:22 GMT" name="sam.json" finished-at="2024-08-20T16:46:38 GMT" duration-ms="15140">
+      <class name="com.sidgupta.tests.vendorapplication.VendorAppTest">
+        <test-method is-config="true" signature="setDriver(org.testng.ITestContext)[pri:0, instance:com.sidgupta.tests.vendorapplication.VendorAppTest@6c61a903]" started-at="2024-08-20T16:46:22 GMT" name="setDriver" finished-at="2024-08-20T16:46:27 GMT" duration-ms="4160" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7efaad5a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method is-config="true" signature="setPageObjects(java.lang.String)[pri:0, instance:com.sidgupta.tests.vendorapplication.VendorAppTest@6c61a903]" started-at="2024-08-20T16:46:27 GMT" name="setPageObjects" finished-at="2024-08-20T16:46:27 GMT" depends-on-methods="com.sidgupta.tests.BaseTest.setDriver" duration-ms="548" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test-data/vendor-application/sam.json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setPageObjects -->
+        <test-method signature="loginTest()[pri:0, instance:com.sidgupta.tests.vendorapplication.VendorAppTest@6c61a903]" started-at="2024-08-20T16:46:27 GMT" name="loginTest" finished-at="2024-08-20T16:46:28 GMT" duration-ms="1349" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method signature="dashboardTest()[pri:0, instance:com.sidgupta.tests.vendorapplication.VendorAppTest@6c61a903]" started-at="2024-08-20T16:46:28 GMT" name="dashboardTest" finished-at="2024-08-20T16:46:37 GMT" depends-on-methods="com.sidgupta.tests.vendorapplication.VendorAppTest.loginTest" duration-ms="8917" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dashboardTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sidgupta.tests.vendorapplication.VendorAppTest@6c61a903]" started-at="2024-08-20T16:46:37 GMT" name="tearDown" finished-at="2024-08-20T16:46:38 GMT" duration-ms="134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sidgupta.tests.vendorapplication.VendorAppTest -->
+    </test> <!-- sam.json -->
+  </suite> <!-- flight-reservation-suite -->
+</testng-results>

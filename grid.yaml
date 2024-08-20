@@ -1,0 +1,20 @@
+version: "3"
+services:
+  hub: 
+    image: selenium/hub:4.20
+  chrome: 
+    image: selenium/node-chrome:4.20
+    shm_size: '2g'
+    deploy:
+      replicas: 0
+    depends_on:
+        - hub
+    env_file : .env
+  firefox: 
+    image: selenium/node-firefox:4.20
+    shm_size: '2g'
+    deploy:
+      replicas: 0
+    depends_on:
+        - hub
+    env_file : .env
