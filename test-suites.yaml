@@ -5,7 +5,7 @@ services:
     environment:
       - HUB_HOST=hub
       - BROWSER
-      - THREAD_COUNT=4
+      - THREAD_COUNT=1
       - TEST_SUITE=vendor-app.xml
     volumes:
       - ./results/vendor-portal:/home/mydocker/test-output
@@ -14,7 +14,7 @@ services:
     environment:
       - HUB_HOST=hub
       - BROWSER
-      - THREAD_COUNT=4
+      - THREAD_COUNT=1
       - TEST_SUITE=flight-reservation.xml
     volumes:
       - ./results/flight-reservation:/home/mydocker/test-output
