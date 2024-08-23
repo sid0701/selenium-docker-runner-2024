@@ -12,10 +12,10 @@ pipeline{
             }
         }
         stage("Execute Test Suites"){
-                parameters{
-            choice choices: ['flight-reservation.xml', 'vendor-app.xml'], name: 'TEST_SUITE'
-    }
             steps{
+                parameters{
+                    choice choices: ['flight-reservation.xml', 'vendor-app.xml'], name: 'TEST_SUITE'
+                    }
                 sh "TEST_SUITE=${params.TEST_SUITE} docker compose -f test-suites.yaml up --pull=always"
                 script{
                     if(fileExists('results/test-suite/testng-failed.xml'))
