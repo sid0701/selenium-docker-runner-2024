@@ -2,7 +2,8 @@ pipeline{
     agent any
 
     parameters {
-            choice choices: ['chrome', 'firefox'], name: 'Browser'
+            choice choices: ['chrome', 'firefox'], name: 'Browser',
+            choice choices: ['flight-reservation.xml', 'vendor-app.xml'], name: 'TEST_SUITE'
         }
 
     stages{
@@ -13,7 +14,7 @@ pipeline{
         }
         stage("Execute Test Suites"){
             steps{
-                sh "docker compose -f test-suites.yaml up --pull=always"
+                sh "TEST_SUITE=${params.TEST_SUITE} docker compose -f test-suites.yaml up --pull=always"
                 script{
                     if(fileExists('results/flight-reservation/testng-failed.xml') || fileExists('results/vendor-portal/testng-failed.xml'))
                         error("Few test cases have failed!!Please have a look.")
