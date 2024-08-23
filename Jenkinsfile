@@ -3,6 +3,7 @@ pipeline{
 
     parameters {
             choice choices: ['chrome', 'firefox'], name: 'Browser'
+            choice choices: ['chrome', 'firefox'], name: 'Test'
         }
 
     stages{
@@ -13,12 +14,9 @@ pipeline{
         }
         stage("Execute Test Suites"){
             steps{
-                parameters{
-                    choice choices: ['flight-reservation.xml', 'vendor-app.xml'], name: 'TEST_SUITE'
-                    }
                 sh "TEST_SUITE=${params.TEST_SUITE} docker compose -f test-suites.yaml up --pull=always"
                 script{
-                    if(fileExists('results/test-suite/testng-failed.xml'))
+                    if(fileExists('results/flight-reservation/testng-failed.xml') || fileExists('results/vendor-app/testng-failed.xml'))
                         error("Few test cases have failed!!Please have a look.")
                 }
             }
@@ -29,7 +27,8 @@ pipeline{
         always{
             sh "docker compose -f grid.yaml down"
             sh "docker compose -f test-suites.yaml down"
-            archiveArtifacts artifacts: 'results/test-suite/emailable-report.html', followSymlinks: false
+            archiveArtifacts artifacts: 'results/flight-reservation/emailable-report.html', followSymlinks: false
+            archiveArtifacts artifacts: 'results/vendor-app/emailable-report.html', followSymlinks: false
         }
     }
 }
