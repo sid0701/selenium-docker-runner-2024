@@ -5,10 +5,6 @@ pipeline{
             choice choices: ['chrome', 'firefox'], name: 'Browser'
         }
 
-    parameters{
-            choice choices: ['flight-reservation.xml', 'vendor-app.xml'], name: 'TEST_SUITE'
-    }
-
     stages{
         stage("Start Grid"){
             steps{
@@ -16,6 +12,9 @@ pipeline{
             }
         }
         stage("Execute Test Suites"){
+                parameters{
+            choice choices: ['flight-reservation.xml', 'vendor-app.xml'], name: 'TEST_SUITE'
+    }
             steps{
                 sh "TEST_SUITE=${params.TEST_SUITE} docker compose -f test-suites.yaml up --pull=always"
                 script{
