@@ -1,20 +1,11 @@
 version: "3"
 services:
-  flight_reservation_test:
+  test_suite:
     image: sid0701/docker2024
     environment:
       - HUB_HOST=hub
       - BROWSER
       - THREAD_COUNT=1
-      - TEST_SUITE=flight-reservation.xml
+      - TEST_SUITE
     volumes:
-      - ./results/flight-reservation:/home/mydocker/test-output
-  vendor_portal_test:
-    image: sid0701/docker2024
-    environment:
-      - HUB_HOST=hub
-      - BROWSER
-      - THREAD_COUNT=1
-      - TEST_SUITE=vendor-app.xml
-    volumes:
-      - ./results/vendor-app:/home/mydocker/test-output
+      - ./results/test_suite_results:/home/mydocker/test-output
